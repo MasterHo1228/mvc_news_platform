@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>新闻内容</title>
+<link rel="stylesheet" href="./public/css/home.css" />
+</head>
+<body>
+<div id="box">
+	<h1><?php echo $data['title']; ?></h1>
+	<h3><?php echo $data['author']; ?></h3>
+	<h4><?php echo $data['date']; ?></h4>
+	<div style="font-size:14px;margin:40px;">
+		<?php echo $data['content']; ?>
+	</div>
+	<div class="news_footer">
+		<a href="index.php?p=home">返回主页</a>
+	</div>
+</div>
+</body>
+</html>
