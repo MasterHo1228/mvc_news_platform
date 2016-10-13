@@ -13,13 +13,13 @@ class model {
 	}
 
 	protected function filter($arr,$func){
-        foreach ($arr as $v){
+        foreach($arr as $v){
             //指定默认值
-            if (!isset($_POST['$v'])){
-                $_POST['v'] = '';
+            if(!isset($_POST[$v])){
+                $_POST[$v] = '';
             }
             //调用函数处理
-            $_POST['v'] = $func($_POST['v']);
+            $_POST[$v] = $func($_POST[$v]);
         }
     }
 }

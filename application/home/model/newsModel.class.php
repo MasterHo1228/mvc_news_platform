@@ -34,10 +34,6 @@ class newsModel extends model{
             $newsID = (int)$_GET['id'];
             $sql = "SELECT author,title,content,date FROM news WHERE id=$newsID;";
             $data = $this->db->fetchRow($sql);
-            if ($data!=false){
-                $data['title'] = str_replace('<br />','',$data['title']);
-                $data['content'] = str_replace('<br />','',$data['content']);
-            }
         }
         return $data;
     }
